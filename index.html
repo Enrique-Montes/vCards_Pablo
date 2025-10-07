@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-container">
+    <!-- Fondo superior -->
+  <div class="header-background"></div>
+
+  <div class="overlay">
+    <div class="card-container">
+  <!-- Foto de perfil -->
+  <img src="img/foto_perfil.jpg" alt="Foto Perfil" class="profile-img">
+
+  <!-- Nombre -->
+  <h1>PABLO ISRAEL VELÁZQUEZ GALLEGOS</h1>
+  <h3>LICENSED TOUR GUIDE</h3>
+  <h4>MÉXICO, CITY.</h4>
+
+  <!-- Botones -->
+  <div class="buttons">
+    <a href="#" class="btn" onclick="openModal()">NICE TO MEET YOU</a>
+
+    <!-- Modal oculto -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Nice to Meet You</h2>
+        <p>Hi, how are you doing? I am <b>Pablo Velázquez</b>, a licensed Tour Guide by Sectur since 2009.</p>
+        <p>Over the years I have had the opportunity to show our visitors the wonders of Mexico City.</p>
+        <p>If you’re planning a trip to this great destination, don’t hesitate to contact me.</p>
+        <p>I will help you plan an unforgettable stay that will allow you to experience the history and culture of this great city.</p>
+      </div>
+    </div>
+
+      <!-- Botón -->
+    <a href="#" id="openGallery" class="btn">BACKGROUND</a>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <div class="lightbox-content">
+        <img src="img/doc1.jpg" alt="Imagen 1">
+        <img src="img/doc2.jpg" alt="Imagen 2">
+        <img src="img/doc3.jpg" alt="Imagen 3">
+        <img src="img/doc4.jpg" alt="Imagen 4">
+        <img src="img/doc5.jpg" alt="Imagen 5">
+        <img src="img/doc6.jpg" alt="Imagen 6">
+      </div>
+    </div>
+    <a href="https://wa.me/5215536469094" target="_blank" class="btn">WHAT'S UP</a>
+    <a href="mailto:pabloguide1821@gmail.com" class="btn">EMAIL</a>
+    <!-- Botón -->
+  <a href="#" id="openVideos" class="btn">YOUR OPINION MATTERS</a>
+
+  <!-- Lightbox para videos -->
+  <div id="videoLightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+      <video controls>
+        <source src="img/video1.mp4" type="video/mp4">
+        Tu navegador no soporta este video.
+      </video>
+      <video controls>
+        <source src="img/video2.mp4" type="video/mp4">
+        Tu navegador no soporta este video.
+      </video>
+      <video controls>
+        <source src="img/video3.mp4" type="video/mp4">
+        Tu navegador no soporta este video.
+      </video>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Galería de 6 imágenes --> 
+   <div class="gallery"> 
+    <img src="img/img1.jpg" alt="Imagen 1"> 
+    <img src="img/img2.jpg" alt="Imagen 2"> 
+    <img src="img/img3.jpg" alt="Imagen 3"> 
+    <img src="img/img4.jpg" alt="Imagen 4"> 
+    <img src="img/img5.jpg" alt="Imagen 5"> 
+    <img src="img/img6.jpg" alt="Imagen 6"> 
+   </div>
+
+  <!-- Carrusel -->
+  <!--<div class="carousel-container">
+    <div class="carousel">
+      <div class="slide"><img src="img/img1.jpg" alt="Imagen 1"></div>
+      <div class="slide"><img src="img/img2.jpg" alt="Imagen 2"></div>
+      <div class="slide"><img src="img/img3.jpg" alt="Imagen 3"></div>
+      <div class="slide"><img src="img/img4.jpg" alt="Imagen 4"></div>
+      <div class="slide"><img src="img/img5.jpg" alt="Imagen 5"></div>
+      <div class="slide"><img src="img/img6.jpg" alt="Imagen 6"></div>
+    </div>
+
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>-->
+
+  <!-- Redes sociales -->
+  <div class="social-icons">
+    <a href="http://www.linkedin.com/in/pablo-vel%C3%A1zquez-35877a223"><img src="img/linkedin.png" alt="LinkedIn"></a>
+    <a href="http://instagram.com/walkingtourcdmx"><img src="img/instagram.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/guiapablovelazquez1325/"><img src="img/facebook.png" alt="Facebook"></a>
+    <a href="https://www.walkingtourcdmx.com/"><img src="img/website.png" alt="Website"></a>
+    <a href="https://www.youtube.com/@walkingtourcdmx"><img src="img/youtube.png" alt="YouTube"></a>
+  </div>
+</div>
+  </div>
+</div>
+
+ <script src="script.js"></script>
+
+</body>
+</html>
