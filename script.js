@@ -12,46 +12,62 @@ function toggleForm() {
 }
 
 // boton background
-const openGallery = document.getElementById("openGallery");
-const lightbox = document.getElementById("lightbox");
-const closeBtn = document.querySelector(".lightbox .close");
+document.addEventListener("DOMContentLoaded", function () {
+  const openGallery = document.getElementById("openGallery");
+  const lightbox = document.getElementById("lightbox");
+  const closeBtn = lightbox.querySelector(".close");
 
-openGallery.addEventListener("click", (e) => {
-  e.preventDefault();
-  lightbox.style.display = "block";
-});
+  // Abrir galería
+  openGallery.addEventListener("click", function (e) {
+    e.preventDefault();
+    lightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
 
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-// Cerrar al dar clic fuera de las imágenes
-lightbox.addEventListener("click", (e) => {
-  if(e.target === lightbox) {
+  // Cerrar galería
+  closeBtn.addEventListener("click", function () {
     lightbox.style.display = "none";
-  }
+    document.body.style.overflow = "auto";
+  });
+
+  // Cerrar al hacer clic fuera
+  lightbox.addEventListener("click", function (e) {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
 });
 
 
-const openVideos = document.getElementById("openVideos");
-const videoLightbox = document.getElementById("videoLightbox");
-const closeVideoBtn = videoLightbox.querySelector(".close");
+//VIDEOS
+document.addEventListener("DOMContentLoaded", function () {
+  const openVideos = document.getElementById("openVideos");
+  const videoLightbox = document.getElementById("videoLightbox");
+  const closeBtn = videoLightbox.querySelector(".close");
 
-openVideos.addEventListener("click", (e) => {
-  e.preventDefault();
-  videoLightbox.style.display = "block";
-});
+  // Abrir galería
+  openVideos.addEventListener("click", function (e) {
+    e.preventDefault();
+    videoLightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
 
-closeVideoBtn.addEventListener("click", () => {
-  videoLightbox.style.display = "none";
-  videoLightbox.querySelectorAll("video").forEach(v => v.pause());
-});
-
-videoLightbox.addEventListener("click", (e) => {
-  if (e.target === videoLightbox) {
+  // Cerrar galería
+  closeBtn.addEventListener("click", function () {
     videoLightbox.style.display = "none";
+    document.body.style.overflow = "auto";
     videoLightbox.querySelectorAll("video").forEach(v => v.pause());
-  }
+  });
+
+  // Cerrar al hacer clic fuera
+  videoLightbox.addEventListener("click", function (e) {
+    if (e.target === videoLightbox) {
+      videoLightbox.style.display = "none";
+      document.body.style.overflow = "auto";
+      videoLightbox.querySelectorAll("video").forEach(v => v.pause());
+    }
+  });
 });
 
 
